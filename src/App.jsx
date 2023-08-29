@@ -32,7 +32,6 @@ const App = () => {
 
   return (
     <>
-      <p>alo 12345678910</p>
       <Stack direction="row" sx={{ alignItems: 'center' }}>
         <TextField
           sx={{ flexGrow: 1, marginRight: 10 }}
