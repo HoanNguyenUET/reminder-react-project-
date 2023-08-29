@@ -40,10 +40,7 @@ const App = () => {
           value={inputText}
           onChange={onInputChanged}
         />
-        <Button
-          // variant="contained"
-          onClick={onAddButtonClicked}
-        >
+        <Button variant="contained" onClick={onAddButtonClicked}>
           Add
         </Button>
       </Stack>

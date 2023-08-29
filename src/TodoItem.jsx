@@ -1,12 +1,12 @@
-import { IconButton, Stack, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { Delete } from "@mui/icons-material";
-import EditIcon from "@mui/icons-material/Edit";
-import DoneIcon from "@mui/icons-material/Done";
+import { IconButton, Stack, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Delete } from '@mui/icons-material';
+import EditIcon from '@mui/icons-material/Edit';
+import DoneIcon from '@mui/icons-material/Done';
 
 export const TodoItem = ({ value, onDelete, onEdit }) => {
   const [editing, setEditing] = useState(false);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   const onEditButtonClicked = () => {
     setEditing(true);
@@ -16,7 +16,7 @@ export const TodoItem = ({ value, onDelete, onEdit }) => {
     onEdit(inputText);
     setEditing(false);
   };
-  const onInputChanged = (e) => {
+  const onInputChanged = e => {
     setInputText(e.target.value);
   };
 
@@ -26,20 +26,14 @@ export const TodoItem = ({ value, onDelete, onEdit }) => {
         <Stack
           direction="row"
           sx={{
-            marginTop: 20,
-            border: "1px #1976d2 solid",
+            marginTop: 2,
+            border: '1px #1976d2 solid',
             borderRadius: 10,
-            padding: 10,
-            alignItems: "center",
+            padding: 1,
+            alignItems: 'center',
           }}
         >
-          <TextField
-            onChange={onInputChanged}
-            hiddenLabel
-            defaultValue={inputText}
-            size="small"
-            sx={{ flexGrow: 1 }}
-          />
+          <TextField onChange={onInputChanged} hiddenLabel defaultValue={inputText} size="small" sx={{ flexGrow: 1 }} />
           <IconButton onClick={onDoneButtonClicked}>
             <DoneIcon />
           </IconButton>
@@ -48,11 +42,11 @@ export const TodoItem = ({ value, onDelete, onEdit }) => {
         <Stack
           direction="row"
           sx={{
-            marginTop: 20,
-            border: "1px #1976d2 solid",
+            marginTop: 2,
+            border: '1px #1976d2 solid',
             borderRadius: 10,
-            padding: 10,
-            alignItems: "center",
+            padding: 1,
+            alignItems: 'center',
           }}
         >
           <Typography sx={{ flexGrow: 1 }}>{value}</Typography>
